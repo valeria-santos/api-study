@@ -25,14 +25,14 @@ public class CourseController {
         return ResponseEntity.status(HttpStatus.CREATED).body(courseCreated);
     }
 
-    @PutMapping("{code}")
-    public ResponseEntity<Void> inactivateCourse(@PathVariable String code) {
+    @PutMapping
+    public ResponseEntity<Void> inactivateCourse(@RequestParam String code) {
         courseService.inactivateCourse(code);
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 
     @GetMapping
-    public ResponseEntity<Page<Course>> listCoursesFilteredByStatus(Status status, int page, int size) {
+    public ResponseEntity<Page<Course>> listCoursesFilteredByStatus(@RequestParam Status status, @RequestParam int page, @RequestParam int size) {
         Pageable pageable = PageRequest.of(page, size);
         Page<Course> courses = courseService.listCoursesFilteredByStatus(status, pageable);
         if (courses.isEmpty()) {

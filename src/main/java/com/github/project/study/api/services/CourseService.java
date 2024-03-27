@@ -13,8 +13,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
@@ -39,7 +37,7 @@ public class CourseService {
     }
 
     @Transactional
-    public void inactivateCourse(@PathVariable String code) {
+    public void inactivateCourse(String code) {
         Optional<Course> courseFound = courseRepository.findByCode(code);
         if (courseFound.isPresent()) {
             Course course = courseFound.get();
@@ -49,7 +47,7 @@ public class CourseService {
         } else throw new CourseNotFoundException("Course not found. Please check if the code entered is correct");
     }
 
-    public Page<Course> listCoursesFilteredByStatus(@RequestParam Status status, Pageable pageable) {
+    public Page<Course> listCoursesFilteredByStatus(Status status, Pageable pageable) {
         return courseRepository.findByStatus(status, pageable);
     }
 

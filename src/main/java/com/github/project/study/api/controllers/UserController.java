@@ -26,8 +26,8 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).body(userCreated);
     }
 
-    @GetMapping("{username}")
-    public ResponseEntity<UserDto> getUserByUsername(@PathVariable String username) {
+    @GetMapping
+    public ResponseEntity<UserDto> getUserByUsername(@RequestParam String username) {
         Optional<User> user = userService.getUserByUsername(username);
         if (user.isPresent()) {
             UserDto userDto = modelMapper.map(user.get(), UserDto.class);
