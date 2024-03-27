@@ -19,7 +19,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private BigInteger id;
-    @NotBlank
+    @NotBlank(message = "The field name is mandatory")
     @Size(max = 255)
     private String name;
     @NotBlank(message = "The field username is mandatory")
@@ -32,7 +32,7 @@ public class User {
     @Column(unique = true)
     @Size(max = 255)
     private String email;
-    @NotBlank
+    @NotBlank(message = "The field password is mandatory")
     @Size(max = 255)
     private String password;
     @Enumerated(EnumType.STRING)
