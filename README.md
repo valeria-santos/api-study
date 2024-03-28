@@ -1,6 +1,6 @@
-API STUDY
+#API STUDY
 
-TECHNOLOGIES USED IN THIS PROJECT:
+##TECHNOLOGIES USED IN THIS PROJECT:
 -Java 21: Programming language used for backend development.
 -JPA: Java Persistence API for managing relational data in Java applications.
 -Maven: Dependency management and build automation tool.
@@ -11,7 +11,7 @@ TECHNOLOGIES USED IN THIS PROJECT:
 -Postman: API development and testing tool.
 -IDE: IntelliJ IDEA - Integrated Development Environment used for development.
 
-HOW TO RUN THE API:
+##HOW TO RUN THE API:
 -Clone the Project;
 -Install the tools;
 -Add environment variable settings;
@@ -23,5 +23,8 @@ Install Postman for API testing.
 
 Configure environment variables such as database connection settings in the project configuration files (application.properties or similar).
 
-WHAT IS THE STUDY API?
-The Study API is a Restful API designed for managing user enrollments in courses. It facilitates the registration of users with different roles (STUDENT, INSTRUCTOR, ADMIN), course creation, and enrollment of users in available courses. Endpoints are accessible through tools like Postman for testing and integration.
+##WHAT IS THE STUDY API?
+The Study API is a Restful API designed for managing user enrollments in courses.
+It facilitates the registration of users with different roles (STUDENT, INSTRUCTOR, ADMIN),
+course creation, and enrollment of users in available courses. 
+Endpoints are accessible through tools like Postman for testing and integration.
