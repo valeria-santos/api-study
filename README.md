@@ -25,6 +25,10 @@
   - Install Postman for API testing.
 ```
 - Configure environment variables such as database connection settings in the project configuration files (application.properties or similar).
+- Run this command in terminal, in the main folder:
+- .\mvnw.cmd spring-boot:run
+
+- Open Postman and Import the collection that is in this project. 
 
 ## WHAT IS THE STUDY API?
 ```
